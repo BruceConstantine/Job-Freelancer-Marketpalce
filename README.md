@@ -37,11 +37,13 @@ Fucking JSF....
 
 
 # Data base
-  * Table Content (Formalazation)
-    <i>Primary Key</i>
-    ~ Product :   <i>ProductID</i>, ProductName, Quantity
-    ~ User    :   <i>UserID</i>, UserName, UserMSG (500 VarChar), UserType
-    ~ Order   :   <i>OrderID,  UserID</i> ProductID_List
+  * Table Content (Formalazation) * 
+    <br/>
+  
+    <i>Primary Key</i><br/>
+    ~ Product :   <i>ProductID</i>, ProductName, Quantity<br/>
+    ~ User    :   <i>UserID</i>, UserName, UserMSG (500 VarChar), UserType<br/>
+    ~ Order   :   <i>OrderID,  UserID</i> ProductID_List<br/>
   
   
 # Back-end
