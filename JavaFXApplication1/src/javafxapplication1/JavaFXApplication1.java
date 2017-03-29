@@ -5,17 +5,13 @@
  */
 package javafxapplication1;
 
-import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
  *
- * @author Lenovo
+ * @author Lenovo Jiasen tian
  */
 public class JavaFXApplication1 extends Application {
     
@@ -27,7 +23,7 @@ public class JavaFXApplication1 extends Application {
             
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
+                System.out.println("Hello");
             }
         });
         
