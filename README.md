@@ -41,9 +41,9 @@ Fucking JSF....
     <br/>
   
     <i>Primary Key</i><br/>
-    ~ Product :   <i>ProductID</i>, ProductName, Quantity<br/>
-    ~ User    :   <i>UserID</i>, UserName, UserMSG (500 VarChar), UserType<br/>
-    ~ Order   :   <i>OrderID,  UserID</i> ProductID_List<br/>
+    ~ Product :   <i><b>ProductID</b></i>, psd , ProductName, Address, phoneNumber, Email ,Quantity<br/>
+    ~ User    :   <i><b>UserID</b></i>, UserName, UserMSG (500 VarChar), UserType<br/>
+    ~ Order   :   <i><b>OrderID,  UserID</b></i> ProductID_List<br/>
   
   
 # Back-end
