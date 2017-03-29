@@ -6,7 +6,7 @@ Fucking JSF....
 # Actors:
 
 <h3>Jason 的想法： 1. 是否可以让用户查看自己的购买历史， 如果可以的话可以在建个记录的table 2017/3/29<h3/>
-
+<span style="color:red"> 小伙子有想法很好 。</span>
 
   1.Clients
     
