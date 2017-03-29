@@ -1,6 +1,7 @@
 # EE4023_JSF
 Fucking JSF....
 
+### Hi guys, please write your idea on the README.MD ###
 
 # Actors:
 
@@ -29,20 +30,27 @@ Fucking JSF....
         
         
   2.Adminitors
-  
+
     * add new product
     * delete product
     * change product stock number
 
 
 
+# User-case 
+
+* customers cancel their order, the database should remain unchanged.
+
+
+
 # Data base
-  * Table Content (Formalazation) * 
+
+  * Table Content (Formalazation)
     <br/>
   
-    <i>Primary Key</i><br/>
-    ~ Product :   <i><b>ProductID</b></i>, psd , ProductName, Address, phoneNumber, Email ,Quantity<br/>
-    ~ User    :   <i><b>UserID</b></i>, UserName, UserMSG (500 VarChar), UserType<br/>
+    <i>(Primary Key)</i><br/>
+    ~ Product :   <i><b>ProductID</b></i>,  ProductName, ,Quantity<br/>
+    ~ User    :   <i><b>UserID</b></i>, UserName,psd ,Address, phoneNumber, Email,UserMSG (500 VarChar), UserType<br/>
     ~ Order   :   <i><b>OrderID,  UserID</b></i> ProductID_List<br/>
   
   
