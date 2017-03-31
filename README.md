@@ -1,5 +1,23 @@
-# EE4023_JSF
-Fucking JSF....
+#项目重点说明
+##要求
+- Deadline: 4.22
+- Format: **Singal .zip/.rar File** (包含NetBeans Project & Report:<b>WORD||PDF</b>)
+- 简述: 制作一个web应用并部署在虚拟机上（JavaEE Container & 数据库自选）
+- 开发环境: NetBeans
+- 技术要求: 主要部分必须由 EJB; Entity Class; JSF 实现
+
+##分数分布
+```
+项目							|分数
+:---							|---:
+**成功部署**						| 10
+应用(是否完成所有的要求; **代码注释质量**; 代码风格 )	| 15
+**报告中指出怎么用技术解决安全问题**			| 8
+**报告中指出测试应用的安全性能**			| 7
+
+
+```
+
 
 <h1>### Hi guys, please write your idea on the README.MD ###<h1/>
 <h1> 翻译：嘿 老铁们， 写下你们的灵感 可以关于任何的灵感， 留下你的建议我们的下次会议会以此展开讨论<h1/>
