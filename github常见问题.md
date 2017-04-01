@@ -23,7 +23,7 @@ e94375bbd808305b2c0463faaa4f7d67131b3b4c ihjn9o
 *git reset -hard e94375bbd8 (只用输入版本号的前几位就能回到所在的版本了)
 **这个是上面的最后一个版本**
 
-#远程推送
+# 远程推送
 
 * git clone https://github.com/BruceConstantine/EE4023_JSF.git
 * 做点儿改变
