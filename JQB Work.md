@@ -4,10 +4,10 @@
  
 
 ## (*为主键)4个表，订单，购物车，订单记录，用户地址
-- Ordering(***Order_ID(int),Product_ID(int)***，User_ID(int),Product_Quantity(int))
-- Cart(***User_ID(int),Product_ID(int）***,Product_Quantity(int),Date(date))
-- order_record(***User_ID(int),Order_ID(int)***,Total_Price(double),Order_Date(date),Status(int),Address(Text))
-- address(***User_ID(int),Address_ID(int)***,Address(Text)) 
+- Ordering(<i>**Order_ID(int),Product_ID(int)**</i>，User_ID(int),Product_Quantity(int))
+- Cart(<i>**User_ID(int),Product_ID(int）**</i>,Product_Quantity(int),Date(date))
+- order_record(<i>**User_ID(int),Order_ID(int)**</i>,Total_Price(double),Order_Date(date),Status(int),Address(Text))
+- address(<i>**User_ID(int),Address_ID(int)**</i>,Address(Text)) 
 
 粗体是主键，所有全都是not null
 <h1>-------分配-------- </h1>
