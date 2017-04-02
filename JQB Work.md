@@ -5,15 +5,15 @@
 
 <h2>#(*为主键)4个表，订单，购物车，订单记录，用户地址</h2>
 
-Ordering(*order_id,*item_ID，user_id,product_quantitity)
+Ordering(*Urder_ID(int),*Product_ID(int)，User_ID(int),Product_Quantity(int))
 
-Cart(*user_id,*item_id,item_quantity,date)
+Cart(*User_ID(int),*Product_ID(int),Product_Quantity(int),Date(date))
 
-order_record(*user_id,*order_id,total_price,order_date,status,address)
+order_record(*User_ID(int),*Order_ID(int),Total_Price(double),Order_Date(date),Status(int),Address(Text))
 
-Userid_Addressid(*user_id,*address_id,address)  
+address(*User_ID(int),*Address_ID(int),Address(Text)) 
 
-
+有*是主键，所有全都是not null
 <h1>-------分配-------- </h1>
 
 
