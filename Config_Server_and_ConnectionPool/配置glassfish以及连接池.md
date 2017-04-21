@@ -16,7 +16,7 @@
   
 - additional配置
  ![additional配置](/Config_Server_and_ConnectionPool/addional%20Properities.jpg)
- 这个很重要<br/>
+ 这个很重要<br/>里面的username和password是你数据库的信息。而且driverClass必须要写。
 
 - 成功建立后ping一下
  ![成功建立后ping一下](/Config_Server_and_ConnectionPool/ping.jpg)<br/>
