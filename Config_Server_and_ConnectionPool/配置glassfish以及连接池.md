@@ -9,3 +9,5 @@
 再 Create new JDBC Source<br/>
 按照图片所示进行配置。<br/>
 
+成功建立后ping一下
+![avatar](/ping.jpg)
