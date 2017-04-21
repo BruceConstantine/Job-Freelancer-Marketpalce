@@ -3,11 +3,20 @@
 里面有一个MySQL的connector，把这个东西放到这个目录里:  ....\payara41\glassfish\domains\domain_goodGlassFish\lib\ext<br/>
 其中 domain_goodGlassFish 这个东西是你在NetBeans里引入服务器时建立的domain的名字<br/>
 
+
 # Connection pool#
 登陆 http://localhost:4848<br/>
 先 Create new JDBCConnection Pool<br/> 
 再 Create new JDBC Source<br/>
 按照图片所示进行配置。<br/>
 
-成功建立后ping一下
-![avatar](/ping.jpg)
+![先建立连接池](/Config_Server_and_ConnectionPool/new%20JDBC%20Resource.jpg)<br/>
+
+![additional配置](/Config_Server_and_ConnectionPool/addional Properities.jpg)
+这个很重要<br/>
+
+![再新建一个JDBC的资源_step1](/Config_Server_and_ConnectionPool/new JDBC Resource.jpg)<br/>
+
+![再新建一个JDBC的资源_step2](/Config_Server_and_ConnectionPool/newJDBCConnectionPool.jpg)<br/>
+
+![成功建立后ping一下](/Config_Server_and_ConnectionPool/ping.jpg)<br/>
