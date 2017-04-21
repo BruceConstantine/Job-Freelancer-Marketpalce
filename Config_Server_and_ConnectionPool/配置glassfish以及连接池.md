@@ -2,7 +2,7 @@
 下载下来之后解压缩<br/>
 里面有一个MySQL的connector，把这个东西放到这个目录里:  ....\payara41\glassfish\domains\domain_goodGlassFish\lib\ext<br/>
 其中 domain_goodGlassFish 这个东西是你在NetBeans里引入服务器时建立的domain的名字<br/>
-
+<i>在NetBeans里的Tools菜单里点击Server选项，添加服务器</i>
 
 # Connection pool#
 登陆 http://localhost:4848<br/>
@@ -26,4 +26,5 @@
 
 - 再新建一个JDBC的资源_step2
  ![再新建一个JDBC的资源_step2](/Config_Server_and_ConnectionPool/JDBC资源.jpg)<br/>
-
+<br/>
+最后OK了
