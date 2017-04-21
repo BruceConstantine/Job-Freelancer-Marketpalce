@@ -10,9 +10,9 @@
 再 Create new JDBC Source<br/>
 按照图片所示进行配置。<br/>
 
-![先建立连接池](/Config_Server_and_ConnectionPool/new JDBC Resource.jpg)<br/>
+![先建立连接池](/Config_Server_and_ConnectionPool/new%20JDBC%20Resource.jpg)<br/>
 
-![additional配置](/Config_Server_and_ConnectionPool/addional Properities.jpg)
+![additional配置](/Config_Server_and_ConnectionPool/addional%20Properities.jpg)
 这个很重要<br/>
 
 ![成功建立后ping一下](/Config_Server_and_ConnectionPool/ping.jpg)<br/>
