@@ -25,5 +25,5 @@
  ![再新建一个JDBC的资源_step1](/Config_Server_and_ConnectionPool/new%20JDBC%20Resource.jpg)<br/>
 
 - 再新建一个JDBC的资源_step2
- ![再新建一个JDBC的资源_step2](/Config_Server_and_ConnectionPool/new%20JDBC%20Resource.jpg)<br/>
+ ![再新建一个JDBC的资源_step2](/Config_Server_and_ConnectionPool/JDBC资源.jpg)<br/>
 
