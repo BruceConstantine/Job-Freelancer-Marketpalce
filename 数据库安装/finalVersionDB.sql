@@ -89,7 +89,7 @@ SELECT * FROM ProductType;
 CREATE TABLE Ordering(
        Order_ID         INT            NOT NULL,
        ProductID        INT            NOT NULL,
-       Username         VARCHAR(20)    NOT NULL,
+      --Username         VARCHAR(20)    NOT NULL,
        Product_Quantity INT            NOT NULL,
        PRIMARY KEY (Order_ID, ProductID),
       -- FOREIGN KEY (Username) REFERENCES Customer(Username),
@@ -98,8 +98,8 @@ CREATE TABLE Ordering(
        CHECK (Product_Quantity >= 0 )
 );
 
-INSERT INTO Ordering(Order_ID, ProductID, Username, Product_Quantity)
-                 VALUES (00043, 00043, 'joe', 2);
+INSERT INTO Ordering(Order_ID, ProductID, /*Username,*/ Product_Quantity)
+                 VALUES (00043, 00043, /*'joe'*/, 2);
 
 CREATE TABLE Cart(
        Username         VARCHAR(20)    NOT NULL,
