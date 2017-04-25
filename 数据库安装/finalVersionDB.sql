@@ -93,16 +93,17 @@ SELECT * FROM ProductType;
 /* Refactor:UserID: VARCHAR(20) && Change name UserID into USERNAME */
 CREATE TABLE Ordering(
        Order_ID         INT            NOT NULL,
-       Product_ID       INT            NOT NULL,
+       ProductID       INT            NOT NULL,
        Username         VARCHAR(20)    NOT NULL,
        Product_Quantity INT            NOT NULL,
-       PRIMARY KEY (Order_ID, Product_ID),
+       PRIMARY KEY (Order_ID, ProductID),
        FOREIGN KEY (Username) REFERENCES Customer(Username),
+       FOREIGN KEY (ProductID) REFERENCES Product(ProductID),
        CHECK (Product_Quantity >= 0 )
 );
 
-INSERT INTO Ordering(Order_ID, Product_ID, Username, Product_Quantity)
-                 VALUES (05355, 00043, 'joe', 2);
+INSERT INTO Ordering(Order_ID, ProductID, Username, Product_Quantity)
+                 VALUES (00043, 00043, 'joe', 2);
 
 CREATE TABLE Cart(
        Username         VARCHAR(20)    NOT NULL,
@@ -126,6 +127,7 @@ CREATE TABLE Order_Record(
        Status          BOOLEAN       NOT NULL,
        Address         VARCHAR (50)  NOT NULL,
        FOREIGN KEY (Username) REFERENCES Customer(Username),
+       FOREIGN KEY (Order_ID) REFERENCES Ordering(Order_ID),
        PRIMARY KEY (Username, Order_ID)
        
 );
