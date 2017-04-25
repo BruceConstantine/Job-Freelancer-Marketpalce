@@ -45,9 +45,7 @@ CREATE TABLE ProductType(
 				 
  INSERT INTO ProductType(TypeID, TypeText)
                  VALUES (5, 'Drink Powder' );
-				 
-
-
+		
 CREATE TABLE Product(
        ProductID        INT             NOT NULL UNIQUE,
        ProductName      VARCHAR (50)    NOT NULL,
@@ -87,17 +85,15 @@ SELECT * FROM Administer;
 SELECT * FROM Product;
 SELECT * FROM ProductType;
 
-
-
-
 /* Refactor:UserID: VARCHAR(20) && Change name UserID into USERNAME */
 CREATE TABLE Ordering(
        Order_ID         INT            NOT NULL,
-       ProductID       INT            NOT NULL,
+       ProductID        INT            NOT NULL,
        Username         VARCHAR(20)    NOT NULL,
        Product_Quantity INT            NOT NULL,
        PRIMARY KEY (Order_ID, ProductID),
-       FOREIGN KEY (Username) REFERENCES Customer(Username),
+      -- FOREIGN KEY (Username) REFERENCES Customer(Username),
+       FOREIGN KEY (Order_ID) REFERENCES Order_Record(Order_ID),
        FOREIGN KEY (ProductID) REFERENCES Product(ProductID),
        CHECK (Product_Quantity >= 0 )
 );
@@ -112,6 +108,7 @@ CREATE TABLE Cart(
        Add_Date         TIMESTAMP      NOT NULL default CURRENT_TIMESTAMP,
        PRIMARY KEY (Username, Product_ID),
        FOREIGN KEY (Username) REFERENCES Customer(Username),
+       FOREIGN KEY (Product_ID) REFERENCES Product(ProductID),
        CHECK ( Product_Quantity >= 0 )
 );
 
@@ -120,16 +117,14 @@ INSERT INTO Cart(Username,  Product_ID, Product_Quantity)
 
 
 CREATE TABLE Order_Record(
-       Username        VARCHAR(20)    NOT NULL,
+       Username        VARCHAR(20)   NOT NULL,
        Order_ID        INT           NOT NULL,
        Total_Price     DOUBLE        NOT NULL,
        Order_Date      TIMESTAMP     NOT NULL default CURRENT_TIMESTAMP,
        Status          BOOLEAN       NOT NULL,
        Address         VARCHAR (50)  NOT NULL,
        FOREIGN KEY (Username) REFERENCES Customer(Username),
-       FOREIGN KEY (Order_ID) REFERENCES Ordering(Order_ID),
        PRIMARY KEY (Username, Order_ID)
-       
 );
  
 INSERT INTO Order_Record(Username, Order_ID, Total_Price, Status, Address )
