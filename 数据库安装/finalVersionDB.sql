@@ -85,22 +85,17 @@ SELECT * FROM Administer;
 SELECT * FROM Product;
 SELECT * FROM ProductType;
 
-/* Refactor:UserID: VARCHAR(20) && Change name UserID into USERNAME */
-CREATE TABLE Ordering(
-       Order_ID         INT            NOT NULL,
-       ProductID        INT            NOT NULL,
-      --Username         VARCHAR(20)    NOT NULL,
-       Product_Quantity INT            NOT NULL,
-       PRIMARY KEY (Order_ID, ProductID),
-      -- FOREIGN KEY (Username) REFERENCES Customer(Username),
-       FOREIGN KEY (Order_ID) REFERENCES Order_Record(Order_ID),
-       FOREIGN KEY (ProductID) REFERENCES Product(ProductID),
-       CHECK (Product_Quantity >= 0 )
+CREATE TABLE Address(
+      Username         VARCHAR(20)    NOT NULL,
+      Address_ID       INT           NOT NULL,
+      Address          VARCHAR (50)  NOT NULL,
+      FOREIGN KEY (Username) REFERENCES Customer(Username),
+      PRIMARY KEY (Username, Address_ID)
 );
 
-INSERT INTO Ordering(Order_ID, ProductID, /*Username,*/ Product_Quantity)
-                 VALUES (00043, 00043, /*'joe'*/, 2);
-
+INSERT INTO Address(Username, Address_ID, Address)
+            VALUES ('joe', 000001, 'limerick..' );
+			
 CREATE TABLE Cart(
        Username         VARCHAR(20)    NOT NULL,
        Product_ID       INT            NOT NULL,
@@ -115,7 +110,6 @@ CREATE TABLE Cart(
 INSERT INTO Cart(Username,  Product_ID, Product_Quantity)
                  VALUES ('joe', 00043, 3);
 
-
 CREATE TABLE Order_Record(
        Username        VARCHAR(20)   NOT NULL,
        Order_ID        INT           NOT NULL,
@@ -124,22 +118,29 @@ CREATE TABLE Order_Record(
        Status          BOOLEAN       NOT NULL,
        Address         VARCHAR (50)  NOT NULL,
        FOREIGN KEY (Username) REFERENCES Customer(Username),
-       PRIMARY KEY (Username, Order_ID)
+       PRIMARY KEY (Order_ID)
 );
  
 INSERT INTO Order_Record(Username, Order_ID, Total_Price, Status, Address )
-                  VALUES ('joe', 00043, 567.89, TRUE, 'limerrick......');
+                  VALUES ('joe', 00043, 567.89, TRUE, 'limerrick......');	
 
-CREATE TABLE Address(
-      Username         VARCHAR(20)    NOT NULL,
-      Address_ID       INT           NOT NULL,
-      Address          VARCHAR (50)  NOT NULL,
-      FOREIGN KEY (Username) REFERENCES Customer(Username),
-      PRIMARY KEY (Username, Address_ID)
+	
+/* Refactor:UserID: VARCHAR(20) && Change name UserID into USERNAME */
+
+CREATE TABLE Ordering(
+       Order_ID         INT            NOT NULL,
+       ProductID        INT            NOT NULL,
+       Product_Quantity INT            NOT NULL,
+       PRIMARY KEY (Order_ID, ProductID),
+       FOREIGN KEY (Order_ID)  REFERENCES Order_Record(Order_ID),
+       FOREIGN KEY (ProductID) REFERENCES Product(ProductID),
+       CHECK (Product_Quantity >= 0 )
 );
 
-INSERT INTO Address(Username, Address_ID, Address)
-            VALUES ('joe', 000001, 'limerick..' );
+INSERT INTO Ordering(Order_ID, ProductID, /*Username,*/ Product_Quantity)
+                 VALUES (00043, 00043, /*'joe',*/ 2);
+
+
 
 SELECT * FROM Customer;
 SELECT * FROM Administer;
