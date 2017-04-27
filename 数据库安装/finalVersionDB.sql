@@ -14,6 +14,8 @@ CREATE TABLE Customer(
 );
 INSERT INTO Customer (Id, Username,  Password, Age, phoneNumber, UserMSG, Email)
                 VALUES ( 2, 'joe'   , '1D10T?', 32,  '0838643219','Ahmedabad', 'sdutbruce@outlook.com');
+INSERT INTO Customer (Id, Username,  Password, Age, phoneNumber, UserMSG, Email)
+                VALUES ( 4, 'jj'   , '1D10T?', 32,  '0838643219','Ahmedabad', 'sssssuce@outlook.com');
 
 
 CREATE TABLE Administer(
@@ -108,7 +110,16 @@ CREATE TABLE Cart(
 );
 
 INSERT INTO Cart(Username,  Product_ID, Product_Quantity)
+                 VALUES ('joe', 1, 3);
+INSERT INTO Cart(Username,  Product_ID, Product_Quantity)
+                 VALUES ('joe', 2, 2);
+INSERT INTO Cart(Username,  Product_ID, Product_Quantity)
                  VALUES ('joe', 00043, 3);
+INSERT INTO Cart(Username,  Product_ID, Product_Quantity)
+                 VALUES ('joe', 3, 3);
+INSERT INTO Cart(Username,  Product_ID, Product_Quantity)
+                 VALUES ('jj', 3, 3);
+				 
 
 CREATE TABLE Order_Record(
        Username        VARCHAR(20)   NOT NULL,
@@ -122,8 +133,12 @@ CREATE TABLE Order_Record(
 );
  
 INSERT INTO Order_Record(Username, Order_ID, Total_Price, Status, Address )
-                  VALUES ('joe', 00043, 567.89, TRUE, 'limerrick......');	
-
+                  VALUES ('joe', 00001, 67.89, TRUE, 'limerrick......');	
+INSERT INTO Order_Record(Username, Order_ID, Total_Price, Status, Address )
+                  VALUES ('joe', 00003, 5.89, TRUE, 'limerrick......');					  
+INSERT INTO Order_Record(Username, Order_ID, Total_Price, Status, Address )
+                  VALUES ('joe', 00043, 7.89, TRUE, 'limerrick......');	
+				  
 	
 /* Refactor:UserID: VARCHAR(20) && Change name UserID into USERNAME */
 
@@ -138,9 +153,12 @@ CREATE TABLE Ordering(
 );
 
 INSERT INTO Ordering(Order_ID, ProductID, /*Username,*/ Product_Quantity)
-                 VALUES (00043, 00043, /*'joe',*/ 2);
+                 VALUES (1, 2, /*'joe',*/ 2);
 
-
+INSERT INTO Ordering(Order_ID, ProductID, /*Username,*/ Product_Quantity)
+                 VALUES (3, 3, /*'joe',*/ 2);
+INSERT INTO Ordering(Order_ID, ProductID, /*Username,*/ Product_Quantity)
+                 VALUES (00043, 1, /*'joe',*/ 2);
 
 SELECT * FROM Customer;
 SELECT * FROM Administer;
