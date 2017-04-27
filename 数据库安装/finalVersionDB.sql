@@ -152,13 +152,13 @@ CREATE TABLE Ordering(
        CHECK (Product_Quantity >= 0 )
 );
 
-INSERT INTO Ordering(Order_ID, ProductID, /*Username,*/ Product_Quantity)
-                 VALUES (1, 2, /*'joe',*/ 2);
+INSERT INTO Ordering(Order_ID, ProductID, Product_Quantity)
+                 VALUES (1, 2, 2);
 
-INSERT INTO Ordering(Order_ID, ProductID, /*Username,*/ Product_Quantity)
-                 VALUES (3, 3, /*'joe',*/ 2);
-INSERT INTO Ordering(Order_ID, ProductID, /*Username,*/ Product_Quantity)
-                 VALUES (00043, 1, /*'joe',*/ 2);
+INSERT INTO Ordering(Order_ID, ProductID, Product_Quantity)
+                 VALUES (3, 3, 2);
+INSERT INTO Ordering(Order_ID, ProductID, Product_Quantity)
+                 VALUES (00043, 1, 2);
 
 SELECT * FROM Customer;
 SELECT * FROM Administer;
