@@ -1,0 +1,51 @@
+    public void modifyDetailFromCustomer(){
+//        FacesContext facesContext = FacesContext.getCurrentInstance();                                                              //create a context 
+//        login loginbean = (login) facesContext.getApplication().getVariableResolver().resolveVariable(facesContext, "loginBean");   //resolve the current variable of loginbean
+//        String username_logined_User = loginbean.getUsername(); 
+//        String password_logined_User = loginbean.getPassword();
+        List<Customer> customers_byName = customerBean.getCustomerByName(username);
+        List<Customer> customers_byID   = customerBean.getCustomerByID(id);
+        
+        if( customers_byID.isEmpty()==false || customers_byName.isEmpty()==false){
+            outputTextForValidation = "User name OR the ID is allready exists on database, please change another";
+            return;
+        } 
+        
+        FacesContext context = FacesContext.getCurrentInstance();
+        ExternalContext ec = context.getExternalContext();
+        HttpSession session = (HttpSession) ec.getSession(true);  
+
+        String username_logined_User = (String) session.getAttribute("username");
+        String password_logined_User = DeEnCode.decode( (String) session.getAttribute("password") );  // get session password and Decode it
+                    
+        //test for log out session on server 
+        System.err.println("Session::username = " + username_logined_User);
+        System.err.println("Session::password = " + password_logined_User);
+        
+        int old_id  = customerBean.getCustomerID(username_logined_User, password_logined_User);
+        
+        System.err.println("old_id = " + old_id);
+        
+        List<Customer> customers = customerBean.getCustomerByID(old_id);
+        
+        Customer old_customer = null;
+        
+        if(!customers.isEmpty()){
+           old_customer  = customers.get(0);
+           outputTextForValidation = checkValidationForUserInput(id, username, password, age, phonenumber, userMSG, email);
+           if( ! "".equals(outputTextForValidation) )
+               return;
+           customerBean.updateCustomer(old_customer, id, username, password, age, phonenumber, userMSG, email); 
+            session.setAttribute("username", username);
+            session.setAttribute("password", password);
+            outputTextForValidation = "";
+        }
+        if(old_customer == null){
+            // no such customer named 'username' 
+            outputTextForValidation = "Exception"; 
+        } 
+        //set up session attribute here
+        session.setAttribute("id", id); 
+        session.setAttribute("username", username);
+        outputTextForValidation = "";
+    }
