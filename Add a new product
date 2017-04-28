@@ -1,0 +1,30 @@
+  Product Name: 
+                <h:inputText value="#{productBean.productName}">
+                <f:validateRequired/>  
+                </h:inputText> 
+                <h:message for="productName"/>
+                <br/>
+                Type ID:
+                <h:inputText value="#{productBean.typeID}">
+                <f:validateRequired/>  
+                </h:inputText> 
+                <h:message for="TypeId"/>
+                <br/>
+<!--                Quantity:
+                <h:inputText value="#{productBean.quantity}"/>
+                <br/>-->
+                Price:
+                <!--  //////////////////////////////// -->
+                 <h:inputText value="#{productBean.price}">
+                 <f:validateRegex pattern="(^[1-9]\d*(\.\d{1,2})?$)|(^[0]{1}(\.\d{1,2})?$)" for="phonenumber"/>
+                 </h:inputText> 
+                 <h:message for="price"/>
+                  <br/>
+                <!-- /////////////////////////// -->
+                
+                Size：
+                <h:inputText value="#{productBean.size}"> 
+                <f:validateRequired/> 
+                  </h:inputText> 
+                 <h:message for="size"/>
+                <br/>
