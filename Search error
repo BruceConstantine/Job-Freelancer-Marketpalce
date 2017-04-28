@@ -1,0 +1,64 @@
+ In ProductBean Class
+ public List<Product > getProductByID(Integer productID) {
+          List<Product> ProductbyId = pro.getProductByID(productID);
+          if(ProductbyId.isEmpty()==true){
+            FacesContext.getCurrentInstance().addMessage(
+                                    null,
+                                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                                              "Incorrect  productID, re-entry it again",
+                                              "Please enter correct productID"));
+           }
+          else{
+               
+          }
+          return ProductbyId;
+     }
+     
+    public List<Product > getProductByName(String productname) {
+          List<Product> ProductbyName = pro.getProductsByName(productname);
+          if(ProductbyName.isEmpty()==true){
+              FacesContext.getCurrentInstance().addMessage(
+                                    null,
+                                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                                              "Incorrect Name, re-entry it again",
+                                              "Please enter correct Name"));
+             }
+          
+          return ProductbyName;
+    }
+    
+    
+    In UserBean Class:
+    
+     public List<Customer> getCustomerByID(int id){
+       List<Customer> customerByID=customerBean.getCustomerByID(id);
+           if(customerByID.isEmpty()==true){
+                  FacesContext.getCurrentInstance().addMessage(
+                                    null,
+                                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                                              "Incorrect UserID , re-entry it again",
+                                              "Please enter correct UserID "));
+         }
+           else{
+               ;
+           }
+       return  customerByID;
+    } 
+    
+    
+     
+    //return a singal record of use searched
+    public List<Customer> getCustomerByName(String name){
+          List<Customer> customerByName=customerBean.getCustomerByName(name);
+           if(customerByName.isEmpty()==true){
+                  FacesContext.getCurrentInstance().addMessage(
+                                    null,
+                                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                                              "Incorrect Username , re-entry it again",
+                                              "Please enter correct username "));
+            }
+           else{
+               ;
+           }
+        return customerByName;
+    } 
