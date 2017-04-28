@@ -1,0 +1,8 @@
+  <!-- ///////////////////////////////////////--> 
+                Age:
+                <h:inputText id="userAge" value="#{userBean.age}">
+                <f:validateRegex pattern="[0-100]{1,3}" for="phonenumber"/>
+                </h:inputText>
+                <h:message for="userAge"/>
+                <br/>
+                <!-- //////////////////////////////////////////-->
