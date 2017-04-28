@@ -1,6 +1,7 @@
-  Product Name: 
+   <h:panelGrid columns="2">
+                Product Name: 
                 <h:inputText value="#{productBean.productName}">
-                <f:validateRequired/>  
+                <f:validateRegex pattern="(^[a-zA-Z]*$)" for="phonenumber"/> 
                 </h:inputText> 
                 <h:message for="productName"/>
                 <br/>
@@ -28,3 +29,12 @@
                   </h:inputText> 
                  <h:message for="size"/>
                 <br/>
+                
+                Product Describe:
+                <h:inputText value="#{productBean.productMSG}"/>
+                 <br/>   
+           <!--     <h:commandButton action="# {productBean.addNewProduct(productBean.productName,productBean.typeID,productBean.quantity,productBean.price,productBean.size,productBean.productMSG)}" 
+                                    value="comfirm add product"/>
+            -->     
+            </h:panelGrid>
+                
